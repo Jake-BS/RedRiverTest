@@ -1,0 +1,17 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to the hot drinks machine</h1>
+    <p>Please select which drink you would like to make below</p>
+    <form method="post">
+        <input type="submit" value="Tea" asp-page-handler="Tea"/>
+        <input type="submit" value="Coffee" asp-page-handler="Coffee"/>
+        <input type="submit" value="Chocolate" asp-page-handler="Chocolate"/>
+    </form>
+    
+    <p id="drinkText">@Model.outputText</p>
+</div>
